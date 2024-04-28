@@ -1,6 +1,6 @@
 streamlit
 numpy             # Library for numerical computations
 pandas             # Data manipulation and analysis library
-scikit-learn       # Machine learning library for modeling and evaluation
+scikit-learn==1.0.2       # Machine learning library for modeling and evaluation
 matplotlib         # Data visualization library
 seaborn           # Statistical data visualization based on matplotlib
