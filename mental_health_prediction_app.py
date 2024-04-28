@@ -15,7 +15,7 @@ def health_prediction(input_data):
     prediction = model.predict(input_array)
     if (prediction[0] == 1):
         return """
-                You have Anxiety.Anxiety is a mental health condition characterised by excessive worry, fear, or nervousness about future events or situations.\n
+                You have Anxiety. Anxiety is a mental health condition characterised by excessive worry, fear, or nervousness about future events or situations.\n
                 It often involves physical symptoms like increased heart rate, muscle tension, and restlessness. Treatment for anxiety can include therapy, such as cognitive-behavioural therapy (CBT), medication, lifestyle changes, and relaxation techniques.\n
                 The most effective approach often depends on the severity of the anxiety and the individual's specific needs, and a mental health professional can provide guidance on the best treatment plan.\n
                 [Reference Video](https://youtu.be/9mPwQTiMSj8?si=tkaZ40cu20cLtjNu)\n\n
@@ -23,7 +23,7 @@ def health_prediction(input_data):
                 """
     elif (prediction[0] == 2):
         return """
-                You have Depression.Depression is a mental health disorder characterised by persistent feelings of sadness, hopelessness, and a lack of interest or pleasure in activities. 
+                You have Depression. Depression is a mental health disorder characterised by persistent feelings of sadness, hopelessness, and a lack of interest or pleasure in activities. 
                 It can also be accompanied by symptoms such as changes in appetite, sleep disturbances, fatigue, and difficulty concentrating. Depression can have a significant impact on a person's daily life and functioning.\n
                 It is a complex condition that can result from a combination of genetic, biological, environmental, and psychological factors. Treatment options often include therapy, medication, and lifestyle changes. If you or someone you know is struggling with depression, it's important to seek help from a mental health professional.\n
                 [Reference Video](https://youtu.be/z-IR48Mb3W0?si=5V8YxrbxuXTcN3Se)\n\n
@@ -31,7 +31,7 @@ def health_prediction(input_data):
                 """
     elif (prediction[0] == 3):
         return """
-               You have Stress.Stress is a natural physiological and psychological response to challenging or demanding situations. It's your body's way of preparing to face a threat or pressure. Stress can be caused by a variety of factors, including work, relationships, financial issues, or major life changes. \n When you experience stress, your body releases stress hormones like cortisol and adrenaline, which can trigger a "fight or flight" response.
+               You have Stress. Stress is a natural physiological and psychological response to challenging or demanding situations. It's your body's way of preparing to face a threat or pressure. Stress can be caused by a variety of factors, including work, relationships, financial issues, or major life changes. \n When you experience stress, your body releases stress hormones like cortisol and adrenaline, which can trigger a "fight or flight" response.
                In small or short-term doses, stress can be beneficial as it helps you stay alert and focused.\n However, chronic or excessive stress can have negative effects on your physical and mental health. It can lead to symptoms such as anxiety, irritability, sleep disturbances, and, in the long term, more serious health issues like cardiovascular problems or mental health disorders. Managing stress through relaxation techniques, exercise, time management, and seeking support when needed is important for overall well-being.\n
                 [Reference Video](https://youtu.be/1BBiaxOxXas?si=lVXUCIqY7N5NjpFN)\n\n
                 [Reference Article](https://www.medicalnewstoday.com/articles/145855#types)
@@ -50,8 +50,11 @@ def health_prediction(input_data):
  
 def main():
    st.title('Mental Health Prediction App') 
+
+   st.markdown("**Enter** &nbsp;&nbsp;&nbsp;&nbsp; **1 - Yes** &nbsp;&nbsp;&nbsp;&nbsp; **&** &nbsp;&nbsp;&nbsp;&nbsp; **0 - No**")
    
-   st.write("Type 1 - Yes & 0 - No")
+   st.markdown("---")
+
 
    feeling_nervous = st.text_input('Are you currently feeling nervous?')
    panic = st.text_input('Have you experienced panic recently?')
@@ -86,7 +89,11 @@ def main():
                                       feeling_tired,close_friend,social_media_addiction,weight_gain,material_possessions,introvert,
                                       popping_up_stressful_memory,having_nightmares,avoids_people_or_activities,feeling_negative,trouble_concentrating,
                                       blamming_yourself])
-   st.success(daignosis)   
+       st.markdown("---")
+       st.success(daignosis)  
+    
+   
+    
 
 
 if __name__ == '__main__':
