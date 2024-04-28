@@ -1,0 +1,8 @@
+
+scp -i "cc_project_key.pem" cc_model.sav ubuntu@ec2-54-90-203-240.compute-1.amazonaws.com:/home/ubuntu/
+scp -i "cc_project_key.pem" mental_health_prediction_app.py ubuntu@ec2-54-90-203-240.compute-1.amazonaws.com:/home/ubuntu/
+
+
+source myenv/bin/activate
+streamlit run mental_health_prediction_app.py
+scp -i "cc_project_key.pem" cc_model.sav ubuntu@ec2-34-228-74-230.compute-1.amazonaws.com:/home/ubuntu/
